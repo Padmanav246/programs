@@ -17,6 +17,10 @@ public class for_statements {
 		//Enhanced for to iterate
 		for(int b:arr)
 		{
+			
+			
+			
+			
 			System.out.println(b);
 		}
 	}
