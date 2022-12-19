@@ -5,6 +5,8 @@ public class Vector1 {
 	{
 		//vector intializing constructor
 
+		
+		
 		Vector<String> vcr=new Vector<String>();
 ////		Vector<String> vcr=new Vector<String>(12);//intial size
 //		Vector<String> vcr=new Vector<String>(12,3);//initial size .//if size increases then how much
