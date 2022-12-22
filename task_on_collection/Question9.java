@@ -1,6 +1,12 @@
 package task_on_collection;
 import java.util.*;
+class Sortbyprice implements Comparator<Product>
+	{
 
+		public int compare(Product o1, Product o2) {
+			return o1.getvalue() - product2.price;
+		}
+}
 public class Question9 {
 	public static void main(String...strings)
 	{
@@ -12,6 +18,7 @@ public class Question9 {
 			tm.put(arr[i],str[i]);
 		}
 		System.out.println("Before Sorting ........."+tm);
+		Collections.sort(tm, ());
 		for(int i=0;i<tm.size();i++)
 		{
 			for(int j=0;j<tm.size();j++)
