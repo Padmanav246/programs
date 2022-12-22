@@ -4,7 +4,7 @@ class Sortbyprice implements Comparator<Product>
 	{
 
 		public int compare(Product o1, Product o2) {
-			return o1.getvalue() - product2.price;
+			return o1 -  o2;
 		}
 }
 public class Question9 {
@@ -18,7 +18,7 @@ public class Question9 {
 			tm.put(arr[i],str[i]);
 		}
 		System.out.println("Before Sorting ........."+tm);
-		Collections.sort(tm, ());
+		Collections.sort(tm, compare());
 		for(int i=0;i<tm.size();i++)
 		{
 			for(int j=0;j<tm.size();j++)
