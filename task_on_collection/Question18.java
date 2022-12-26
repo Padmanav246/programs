@@ -13,16 +13,51 @@ class Function
 		{
 			str[i]=Sc.next();
 		}
+		Arrays.sort(str);
+		return str;
+	}
+	public String[] Ordering(String str[],int n)
+	{
+		if(str.length %2 == 0)
+		{
+			for(int j=0;j<n/2;j++)
+			{
+				str[j]=str[j].toUpperCase();
+			}
+			for(int j=n/2;j<n;j++)
+			{
+				str[j]=str[j].toLowerCase();
+			}
+		}
+		else
+		{
+			for(int j=0;j<=n/2;j++)
+			{
+				str[j]=str[j].toUpperCase();
+			}
+			for(int j=n/2+1;j<n;j++)
+			{
+				str[j]=str[j].toLowerCase();
+			}
+
+		}
 		return str;
 	}
 }
 public class Question18 {
 	public static void main(String[] args) {
-		String str[]= {"Pintu","Padmanav","Chintu","sani"};
-		Arrays.sort(str);
+		Function f1=new Function();
+		String str[]=f1.sort();
+		System.out.println("After sorting ");
 		for(String s:str)
 		{
-		System.out.println(s);
+			System.out.println(s);
+		}
+		str=f1.Ordering(str,str.length);
+		System.out.println("After Complete");
+		for(String s:str)
+		{
+			System.out.println(s);
 		}
 	}
 }
