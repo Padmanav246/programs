@@ -1,13 +1,14 @@
 package collection;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Arraylist {
 	public static void main(String args[]){    
 		ArrayList<String> list=new ArrayList<String>(3);
 		String car[]= {"Toyota","Kia","Fortuner","Inova","Thar"};
 		
-
+		ArrayList<Integer> number=new ArrayList<Integer>(3);
 		
 		
 		
@@ -92,9 +93,11 @@ public class Arraylist {
 			System.out.print(str+" ");
 		}
 		
-		
-		
-		
+		List<Integer> square=number.stream().map(x -> x*x).collect(Collectors.toList());
+		for(int str:square)
+		{
+			System.out.print(str+" ");
+		}
 //	//sorting elements in the arraylist
 //	Collections.sort(list);
 //	for(String str:list)

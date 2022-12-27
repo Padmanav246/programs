@@ -15,5 +15,7 @@ public class StringMethods {
 		System.out.println(s1.concat(s1));
 		System.out.println(s1.equals(s1));
 		System.out.println(s1.isEmpty());
+		System.out.println(s1.getClass());
+		System.out.println(s1.equals(s1));
 	}
 }

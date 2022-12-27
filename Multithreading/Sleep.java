@@ -24,7 +24,6 @@ public class Sleep {
 		Thread t2=new Thread(m2);
 		t1.start();
 		t2.start();
-		t1.start();
-		
+		System.out.println(t1.equals(t1));
 	}
 }
