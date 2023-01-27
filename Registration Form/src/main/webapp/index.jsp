@@ -78,7 +78,7 @@ a{
 			<div class="card">
 			
 				<div id="card-content">
-					<h3>Register here !!</h3>
+					<h3>Register As Customer here !!</h3>
 					<h5 id="msg"></h5>
 					<div class="formgroup">
 						<form action="process.jsp" method="post" name = "myForm" id="myform" onsubmit = "validate();">
@@ -100,7 +100,7 @@ a{
 							</div>
 							<div class="form">
 								<lebel class="form-lebel" for="Phone">Phone</lebel>
-								<input class="form-control" type="Gmail" name="Phone" />
+								<input class="form-control" type="text" name="Phone" />
 							</div>
 							<div class="form">
 								<lebel class="form-lebel" for="Gender">Gender</lebel>

@@ -65,7 +65,7 @@ a{
       <div class="col">
       	<div class="card">
       		<div class="card-content">
-      			<h3>Register hear !!</h3>
+      			<h3>Login As Seller !!</h3>
       			<h5 id="msg"></h5>
       			<div class="formgroup">
       				<form action="loginadmin" method="post" name = "myForm" id="myform">
@@ -84,6 +84,7 @@ a{
       					
       					<input class="btn btn-success w-100" type="submit" value="SignIn">
       					<h5><a href="adminlogin.html">Register hear(New user)</a></h5>
+      					<h5><a href="product.html">Addproduct</a></h5>
       				</form>
       			</div>
       		</div>

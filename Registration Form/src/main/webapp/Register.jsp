@@ -65,7 +65,7 @@ a{
       <div class="col">
       	<div class="card">
       		<div class="card-content">
-      			<h3>Register hear !!</h3>
+      			<h3>Login As User !!</h3>
       			<h5 id="msg"></h5>
       			<div class="formgroup">
       				<form action="login" method="post" name = "myForm" id="myform">
