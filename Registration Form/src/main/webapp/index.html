@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .manubar{
+            background-color: green;
+            text-align: center;
+        }
+        .manubar ul{
+            display: inline-flex;
+            list-style: none;
+            color: aliceblue;
+        }
+        .manubar ul li{
+            width: 120px;
+            margin: 15px;
+            padding: 15px;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .manubar ul li a{
+           text-decoration:none ;
+           color: aliceblue;
+
+        }
+        .active, .manubar ul li:hover{
+            background: #2bab0d;
+            border-radius: 5px;
+
+        }
+        .submenu{
+            display: none;
+        }
+        .manubar ul li:hover .submenu{
+            display: block;
+            position:absolute;
+            background: rgb(0, 100, 0);
+            margin-top: 15px;
+            margin-left: -15px;
+        }
+        .manubar ul li:hover .submenu ul{
+            display: block;
+            margin: 10px;
+        }
+        .manubar ul li:hover .submenu ul li{
+            width: 150px;
+            padding: 10px;
+            border-bottom: 1px dotted #fff;
+            background: transparent;
+            border-radius: 2px;
+            text-align: center;
+        }
+        .manubar ul li:hover .submenu ul li:last-child
+        {
+            border-bottom: none;
+        }
+        .manubar ul li:hover .submenu ul li:hover{
+            color: #b2ff00;
+        }
+    </style>
+</head>
+<body>
+<div class="manubar">
+    <ul>
+        <li id="iteams"><a href ="#">Home</a>
+        </li>
+        <li id="iteams"><a href ="#">Aboutus</a></li>
+        <li id="iteams"><a href ="#">Services</a></li>
+        <li id="iteams"><a href ="#">Clints</a></li>
+        <li id="iteams"><a href ="#">Pricing</a></li>
+        <li id="iteams"><a href ="#">Login</a>
+            <div class="submenu">
+                <ul>
+                    <li><a href="Register.jsp">Customer</a></li>
+                    <li><a href="adminregister.jsp">Admin</a></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

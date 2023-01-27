@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-	<%@page import="bean.RegisterDao"%>
+	<%@page import="bean.registeradmin"%>
 	<%@page import="bean.User"%>
 	 <%
 	 User u=new User();
@@ -14,7 +14,7 @@
 	 u.setPassword(request.getParameter("Password"));
 	  %>
 	<%
-	RegisterDao d=new RegisterDao();
+	registeradmin d=new registeradmin();
 	int status=d.register(u);
 	if (status > 0)
 		out.print("done");

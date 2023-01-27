@@ -11,7 +11,7 @@ public class ConnectionProvider {
 			String USERNAME = "root";
 			String PASSWORD = "Pintu@123";
 //System.out.println("you are in connection provider class");
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 //System.out.println("you are in connection provider class");
 			con = DriverManager.getConnection(CONNECTION_URL, USERNAME, PASSWORD);
 			System.out.println(con);

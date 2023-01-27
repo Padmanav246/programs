@@ -81,7 +81,7 @@ a{
 					<h3>Register here !!</h3>
 					<h5 id="msg"></h5>
 					<div class="formgroup">
-						<form action="process.jsp" method="post" name = "myForm" id="myform" onsubmit = "validate();">
+						<form action="process2.jsp" method="post" name = "myForm" id="myform" >
 							<div class="form">
 								<lebel class="form-lebel" for="Fname" >Fname</lebel>
 								<input class="form-control" type="name"  name="Fname" required/>
@@ -124,7 +124,7 @@ a{
 								<input class="form-control" type="password" name="Password" required/>
 							</div>
 							<input class="btn btn-success w-100" type="submit" value="SignIn">
-							<h5><a href="Register.jsp">LOGIN</a></h5>
+							<h5><a href="adminregister.jsp">LOGIN</a></h5>
 						</form>
 					</div>
 				</div>
@@ -148,7 +148,7 @@ a{
 		  var f=$(this).serialize();
 		  console.log(f);
 		  $.ajax({
-			  url:"process.jsp",
+			  url:"process2.jsp",
 			  data: f,
 			  type : 'post',
 			  success: function(data,textStatus,jqXHR){
