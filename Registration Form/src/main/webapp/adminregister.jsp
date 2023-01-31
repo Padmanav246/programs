@@ -85,6 +85,7 @@ a{
       					<input class="btn btn-success w-100" type="submit" value="SignIn">
       					<h5><a href="adminlogin.html">Register hear(New user)</a></h5>
       					<h5><a href="product.html">Addproduct</a></h5>
+      					<h5><a href="index.jsp">Home</a></h5>
       				</form>
       			</div>
       		</div>
@@ -119,7 +120,7 @@ a{
 					  }
 				  else
 					  {
-					  $('#msg').html("New user try to login first..!!");
+					  $('#msg').html("New user try to Register first..!!");
 					  }
 			  },
 			  error: function(jqXHR,textStatus,errorThrown){

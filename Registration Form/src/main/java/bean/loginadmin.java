@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class loginadmin
@@ -20,6 +21,8 @@ public class loginadmin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void processrequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	{
+    		Clear cl=new Clear();
+			cl.clear();
     		response.setContentType("text/html");
     		PrintWriter out=response.getWriter();
     		
@@ -28,8 +31,6 @@ public class loginadmin extends HttpServlet {
     		String password=request.getParameter("mypwd");
     		
     		try {
-    			
-
                 //create the connection
     			Connection con = ConnectionProvider.getCon();
                 PreparedStatement st= con.prepareStatement("SELECT Userid,Password,Email FROM sellers");
@@ -47,6 +48,8 @@ public class loginadmin extends HttpServlet {
                 		System.out.println(rs.getString(1));
                     	System.out.println(rs.getString(2));
                     	System.out.println(rs.getString(3));
+                    	HttpSession session=request.getSession();  
+                        session.setAttribute("Userid",name);
                 				status=1;
                 				break;
                 			}

@@ -1,4 +1,5 @@
-
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -77,12 +78,12 @@ a{
 			<div class="card">
 			
 				<div id="card-content">
-					<h3>Register As Seller !!</h3>
+					<h3>Register As Customer here !!</h3>
 					<h5 id="msg"></h5>
 					<div class="formgroup">
-						<form action="process2.jsp" method="post" name = "myForm" id="myform" >
+						<form action="process.jsp" method="post" name = "myForm" id="myform" onsubmit = "validate();">
 							<div class="form">
-								<lebal class="form-lebel" for="Fname" >Fname</lebel>
+								<lebel class="form-lebel" for="Fname" >Fname</lebel>
 								<input class="form-control" type="name"  name="Fname" required/>
 							</div>
 							<div class="form">
@@ -99,10 +100,10 @@ a{
 							</div>
 							<div class="form">
 								<lebel class="form-lebel" for="Phone">Phone</lebel>
-								<input class="form-control" type="Gmail" name="Phone" />
+								<input class="form-control" type="text" name="Phone" />
 							</div>
 							<div class="form">
-								<label class="form-lebel" for="Gender">Gender</lebel>
+								<lebel class="form-lebel" for="Gender">Gender</lebel>
 								<input class="form-check-input" type="radio" name="Gender"
 									id="flexRadioDefault1" value="Male"> 
 									<label
@@ -123,7 +124,7 @@ a{
 								<input class="form-control" type="password" name="Password" required/>
 							</div>
 							<input class="btn btn-success w-100" type="submit" value="SignIn">
-							<h5 ><a href="adminregister.jsp">LOGIN</a></h5>
+							<h5><a href="Register.jsp">LOGIN</a></h5>
 							<h5><a href="index.jsp">Home</a></h5>
 						</form>
 					</div>
@@ -148,7 +149,7 @@ a{
 		  var f=$(this).serialize();
 		  console.log(f);
 		  $.ajax({
-			  url:"process2.jsp",
+			  url:"process.jsp",
 			  data: f,
 			  type : 'post',
 			  success: function(data,textStatus,jqXHR){

@@ -7,11 +7,13 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class login
@@ -22,6 +24,8 @@ public class login extends HttpServlet {
 
 	protected void processrequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	{
+    		Clear cl=new Clear();
+			cl.clear();
     		response.setContentType("text/html");
     		PrintWriter out=response.getWriter();
     		
@@ -49,14 +53,23 @@ public class login extends HttpServlet {
                 		System.out.println(rs.getString(1));
                     	System.out.println(rs.getString(2));
                     	System.out.println(rs.getString(3));
-                				status=1;
+                    	status=1;
+                    	HttpSession session=request.getSession();  
+                        session.setAttribute("Userid",name);
+                				
                 				break;
                 			}
                 }
                 if(status==0)
+                {
                 	out.println("error");
+                }
                 else
+                {
                 	out.println("done");
+                	
+               
+                }
     		}
     		catch(Exception e)
     		{

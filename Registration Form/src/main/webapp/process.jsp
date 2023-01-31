@@ -17,8 +17,8 @@
 	RegisterDao d=new RegisterDao();
 	int status=d.register(u);
 	if (status > 0)
-		out.print("done");
-	
+	{	
+		out.print("done");}
 	else
 		out.print("error");
 	%>

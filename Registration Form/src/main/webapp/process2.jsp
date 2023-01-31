@@ -13,6 +13,7 @@
 	 u.setUserid(request.getParameter("Userid"));
 	 u.setPassword(request.getParameter("Password"));
 	  %>
+	  <% %>
 	<%
 	registeradmin d=new registeradmin();
 	int status=d.register(u);
